@@ -25,8 +25,8 @@ done < "$FILE"
 echo "0 $SEX_0" > sex_count.dat
 echo "1 $SEX_1" >> sex_count.dat
 gnuplot << EOF
-set terminal pdf
-set output 'quest4(a).pdf'
+set terminal png
+set output 'quest4(a).png'
 
 set boxwidth 0.5
 set style fill solid 0.5
@@ -37,5 +37,5 @@ set xtics ("Female" 0,"Male" 1)
 plot 'sex_count.dat' using 2:xtic(1) with boxes notitle
 EOF
 
-echo "Histogram saved as quest4(a).pdf"
+echo "Histogram saved as quest4(a).png"
 
